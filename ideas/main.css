@@ -1,0 +1,117 @@
+/* custom variables/properties */
+:root{
+    --main-font: 'Snell Roundhand', cursive;
+    --font-color: rgb(0, 0, 0);
+
+    --navbar-color: rgb(111, 233, 192);
+    --nav-hover: rgb(161, 237, 161);
+    
+    --max-proj-width: 12em;
+    --proj-hover-color: black;
+
+    --footer-color: rgb(62, 170, 236);
+    --footer-hover-color: rgb(161, 231, 237);
+}
+
+header,
+body,
+footer{
+    font-family: var(--main-font);
+}
+
+body{
+    background-color: white;
+}
+
+/*navbar stuff*/
+nav a,
+nav a:hover{
+    color:var(--font-color);
+}
+header{
+    background: var(--navbar-color);
+    padding: 0;
+    margin-bottom: 0%;
+}
+.logo{
+    text-align: center;
+}
+.logo img{
+    max-height: 10em;
+    width: 100%;
+}
+.logo a{
+    text-decoration: none;
+}
+nav ul{
+    background: var(--navbar-color);
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: left;
+    background:var(--navbar-color);
+}
+nav li{
+    margin-left: 1em;
+}
+nav a{
+    display: inline-block;
+    font-weight: normal;
+    font-size: 1.2em;
+    padding: 1em;
+    text-decoration: none;
+}
+nav a:hover{
+    background:var(--nav-hover);
+    margin-left: 2px;
+    font-weight: bolder;
+}
+/*navbar end*/
+
+/*body stuff*/
+.body-grid-container{
+    display: grid;
+    /* grid-template-columns: repeat(4,1fr); */
+
+    /*gets rid of overflow when browser is small*/
+    grid-template-columns: repeat(auto-fit,minmax(min(10em,100%),1fr)); 
+    background-color: beige;
+    column-gap: 4rem; /*puts space between projects*/
+    row-gap: 1rem;
+    overflow-x: hidden; /*gets rid horizontal scroll*/
+}
+.grid-proj{
+    margin-left: auto; /*center the images */
+    margin-right: auto; /*center the images */
+    font-weight: normal;
+}
+
+.grid-proj,
+.grid-proj img{
+    max-width: var(--max-proj-width);
+}
+.grid-proj a:hover{
+    margin-left: 2px;
+    background: var(--proj-hover-color);
+}
+/*end body stuff*/
+
+/*footer stuff*/
+footer{
+    background:var(--footer-color);
+    display: flex;
+}
+footer ul{
+    list-style: none;
+}
+footer a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+footer a:hover{
+    margin-left: 2px;
+    font-weight: bold;
+    background:var(--footer-hover-color);
+}
+/*end footer*/
